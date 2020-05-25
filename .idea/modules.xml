@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/leapfrog.iml" filepath="$PROJECT_DIR$/leapfrog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leapfrog-common/leapfrog-common.iml" filepath="$PROJECT_DIR$/leapfrog-common/leapfrog-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leapfrog-console/leapfrog-console.iml" filepath="$PROJECT_DIR$/leapfrog-console/leapfrog-console.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leapfrog-dao/leapfrog-dao.iml" filepath="$PROJECT_DIR$/leapfrog-dao/leapfrog-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leapfrog-interface/leapfrog-interface.iml" filepath="$PROJECT_DIR$/leapfrog-interface/leapfrog-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leapfrog-login/leapfrog-login.iml" filepath="$PROJECT_DIR$/leapfrog-login/leapfrog-login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leapfrog-pojo/leapfrog-pojo.iml" filepath="$PROJECT_DIR$/leapfrog-pojo/leapfrog-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leapfrog-portal/leapfrog-portal.iml" filepath="$PROJECT_DIR$/leapfrog-portal/leapfrog-portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leapfrog-service-cms/leapfrog-service-cms.iml" filepath="$PROJECT_DIR$/leapfrog-service-cms/leapfrog-service-cms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leapfrog-service-cob/leapfrog-service-cob.iml" filepath="$PROJECT_DIR$/leapfrog-service-cob/leapfrog-service-cob.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leapfrog-service-product/leapfrog-service-product.iml" filepath="$PROJECT_DIR$/leapfrog-service-product/leapfrog-service-product.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leapfrog-service-solr/leapfrog-service-solr.iml" filepath="$PROJECT_DIR$/leapfrog-service-solr/leapfrog-service-solr.iml" />
+    </modules>
+  </component>
+</project>

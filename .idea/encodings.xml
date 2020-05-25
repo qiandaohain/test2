@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leapfrog-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leapfrog-console" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leapfrog-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leapfrog-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leapfrog-login" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leapfrog-pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leapfrog-portal" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leapfrog-service-cms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leapfrog-service-cob" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leapfrog-service-product" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leapfrog-service-solr" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

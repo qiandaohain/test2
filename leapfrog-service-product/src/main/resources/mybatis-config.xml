@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- 不能联想 sts-->
+<configuration>
+	<!-- setting 迟延加载  二级缓存（我们不用）   我们用分布式缓存  -->
+	
+	
+	<!-- 别名 里面设置包的好处是，我们后期加载所有bean包-->
+	<typeAliases>
+		<package name="cn.travelround.core.bean"/>
+	</typeAliases>
+	
+	<!-- Mapper 位置 配置
+	<mappers>
+	</mappers>
+	 -->
+
+</configuration>

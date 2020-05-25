@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="cn.travelround.core.dao.product.BrandDao">
+
+	<resultMap id="brand" type="Brand">
+		<result column="img_url" property="imgUrl"/>
+		<result column="is_display" property="isDisplay"/>
+	</resultMap>
+
+	<!--查询内容-->
+	<select id="selectBrandListByQuery" parameterType="BrandQuery" resultMap="brand">
+		SELECT id,name,description,img_url,sort,is_display FROM bbs_brand
+		<where>
+			<if test="name != null">
+				name LIKE "%"#{name}"%"
+			</if>
+			<if test="isDisplay != null">
+				and is_display = #{isDisplay}
+			</if>
+		</where>
+		<if test="startRow != null">
+			limit #{startRow}, #{pageSize}
+		</if>
+	</select>
+
+	<!--查询个数-->
+	<select id="selectCount" parameterType="BrandQuery" resultType="Integer">
+		SELECT count(1) FROM bbs_brand
+		<where>
+			<if test="name != null">
+				name LIKE "%"#{name}"%"
+			</if>
+			<if test="isDisplay != null">
+				and is_display = #{isDisplay}
+			</if>
+		</where>
+	</select>
+
+	<select id="selectBrandById" parameterType="Long" resultMap="brand">
+		SELECT id,name,description,img_url,sort,is_display FROM bbs_brand
+		<where>
+			id = #{id}
+		</where>
+	</select>
+
+	<!--修改-->
+	<update id="updateBrandById" parameterType="Brand">
+		update bbs_brand
+		<set>
+			<if test="name != null">
+				name = #{name},
+			</if>
+			<if test="description != null">
+				description = #{description},
+			</if>
+			<if test="imgUrl != null">
+				img_url = #{imgUrl},
+			</if>
+			<if test="sort != null">
+				sort = #{sort},
+			</if>
+			<if test="isDisplay != null">
+				is_display = #{isDisplay},
+			</if>
+		</set>
+		<where>
+			id = #{id}
+		</where>
+	</update>
+
+	<!--删除-->
+	<delete id="deletes" parameterType="Long">
+		DELETE FROM bbs_brand
+		<where>
+			id IN
+			<foreach collection="array" item="id" separator="," open="(" close=")">
+				#{id}
+			</foreach>
+		</where>
+	</delete>
+
+</mapper>

@@ -1,0 +1,13 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<!-- Redis  配置 -->
+	<bean id="jedis" class="redis.clients.jedis.Jedis">
+		<!--type - 因为构造方法两个参数类型不同-->
+		<constructor-arg value="172.16.52.214" index="0" type="java.lang.String"/>
+		<constructor-arg value="6379" index="1"/>
+	</bean>
+
+</beans>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="leapfrog-portal:war">
+    <output-path>$PROJECT_DIR$/leapfrog-portal/target</output-path>
+    <root id="archive" name="leapfrog-portal-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="leapfrog-portal:war exploded" />
+    </root>
+  </artifact>
+</component>

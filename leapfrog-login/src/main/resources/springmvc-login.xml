@@ -1,0 +1,87 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd 
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-4.0.xsd 
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-4.0.xsd 
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+		http://www.springframework.org/schema/task
+   		http://www.springframework.org/schema/task/spring-task-4.0.xsd
+		http://code.alibabatech.com/schema/dubbo        
+		http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<!--注意!!! - 下面的一定要加到common的pom.xml文件中, 否则会访问不成功-->
+	<!--<dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>-->
+
+	<!-- 扫描 travelround包下所有@Controller  而且自带装配功能-->
+	<context:component-scan base-package="cn.travelround" />
+	<!--自动装配扫描@AutoWriter注入注解-->
+
+	<!--静态资源放行-->
+	<!--方式1-->
+	<!--<mvc:resources mapping="/js/**" location="/js/"/>-->
+	<!--<mvc:resources mapping="/css/**" location="/css/"/>-->
+	<!--<mvc:resources mapping="/images/**" location="/images/"/>-->
+
+	<!--方式2-->
+	<mvc:default-servlet-handler/>
+
+	<!-- 三个基本点：处理器 映射器  适配器 -->
+	<!--<mvc:annotation-driven/>-->
+
+	<mvc:annotation-driven conversion-service="conversionService"/>
+
+	<!-- 视图解释器 jsp -->
+	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/login/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+
+	<!--Converter转换器工厂-->
+	<bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<property name="converters">
+			<list>
+				<bean class="cn.travelround.common.conversion.CustomConverter"></bean>
+			</list>
+		</property>
+	</bean>
+
+
+	<!--文件上传-->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>
+
+
+	<import resource="dubbo-consumer.xml"/>
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
