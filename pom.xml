@@ -299,7 +299,7 @@
             <dependency>
                 <groupId>org.apache.zookeeper</groupId>
                 <artifactId>zookeeper</artifactId>
-                <version>3.4.6</version>
+                <version>3.4.14</version>
             </dependency>
             <!-- Zookeeper 用于分布式服务管理 end -->
             <!-- Active MQ 开始 -->
